@@ -1,22 +1,16 @@
 /**
- * UC2: Display Hello with Command-Line Argument
+ * UC3: Display Hello with Command-Line Argument or Default Message
  */
 
 public class HelloApp {
 
     public static void main(String[] args) {
 
-        // Check if argument is provided
-        if (args.length > 0) {
+        // Assign name using ternary operator
+        String name = (args.length > 0) ? args[0] : "World";
 
-            String name = args[0];
-            System.out.println("Hello, " + name + "!");
-
-        } else {
-
-            System.out.println("Hello, World!");
-
-        }
+        // Print greeting
+        System.out.println("Hello, " + name + "!");
 
     }
 }
