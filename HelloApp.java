@@ -1,24 +1,19 @@
 /**
- * UC6: Display Hello using User Input
+ * UC7: Display Hello using String.join() or default
  */
-
-import java.util.Scanner;
 
 public class HelloApp {
 
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
+        String result;
 
-        System.out.print("Enter your name: ");
-        String name = input.nextLine();
-
-        if (name.isEmpty()) {
-            name = "World";
+        if (args.length == 0) {
+            result = "World";
+        } else {
+            result = String.join(", ", args);
         }
 
-        System.out.println("Hello, " + name + "!");
-
-        input.close();
+        System.out.println("Hello, " + result + "!");
     }
 }
