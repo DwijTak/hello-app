@@ -1,5 +1,5 @@
 /**
- * UC4: Display Hello with Multiple Command-Line Arguments or Default Message
+ * UC5: Display Hello with Multiple Command-Line Arguments or Default Message
  */
 
 public class HelloApp {
