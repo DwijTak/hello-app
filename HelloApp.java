@@ -1,20 +1,24 @@
 /**
- * UC5: Display Hello with Multiple Command-Line Arguments or Default Message
+ * UC6: Display Hello using User Input
  */
+
+import java.util.Scanner;
 
 public class HelloApp {
 
     public static void main(String[] args) {
 
-        String names;
+        Scanner input = new Scanner(System.in);
 
-        if (args.length > 0) {
-            // Join all names with comma and space
-            names = String.join(", ", args);
-        } else {
-            names = "World";
+        System.out.print("Enter your name: ");
+        String name = input.nextLine();
+
+        if (name.isEmpty()) {
+            name = "World";
         }
 
-        System.out.println("Hello, " + names + "!");
+        System.out.println("Hello, " + name + "!");
+
+        input.close();
     }
 }
